@@ -1,0 +1,11 @@
+c:\users\marc\documents\visual studio 2013\Projects\ProfitCalculator\ProfitCalculator\bin\Debug\ProfitCalculator.exe.config
+c:\users\marc\documents\visual studio 2013\Projects\ProfitCalculator\ProfitCalculator\bin\Debug\Products.mdf
+c:\users\marc\documents\visual studio 2013\Projects\ProfitCalculator\ProfitCalculator\bin\Debug\Products_log.ldf
+c:\users\marc\documents\visual studio 2013\Projects\ProfitCalculator\ProfitCalculator\bin\Debug\ProfitCalculator.exe
+c:\users\marc\documents\visual studio 2013\Projects\ProfitCalculator\ProfitCalculator\bin\Debug\ProfitCalculator.pdb
+c:\users\marc\documents\visual studio 2013\Projects\ProfitCalculator\ProfitCalculator\obj\Debug\ProfitCalculator.csprojResolveAssemblyReference.cache
+c:\users\marc\documents\visual studio 2013\Projects\ProfitCalculator\ProfitCalculator\obj\Debug\ProfitCalculator.Form1.resources
+c:\users\marc\documents\visual studio 2013\Projects\ProfitCalculator\ProfitCalculator\obj\Debug\ProfitCalculator.Properties.Resources.resources
+c:\users\marc\documents\visual studio 2013\Projects\ProfitCalculator\ProfitCalculator\obj\Debug\ProfitCalculator.csproj.GenerateResource.Cache
+c:\users\marc\documents\visual studio 2013\Projects\ProfitCalculator\ProfitCalculator\obj\Debug\ProfitCalculator.exe
+c:\users\marc\documents\visual studio 2013\Projects\ProfitCalculator\ProfitCalculator\obj\Debug\ProfitCalculator.pdb
