@@ -42,15 +42,35 @@ namespace ProfitCalculator
        //add a new row to the database
         private void button1_Click(object sender, EventArgs e)
         {
-            this.productInfoBindingSource.AddNew();
+            chart1.Update();
+            chart1.DataBind();
+            try
+            {
+                this.productInfoBindingSource.AddNew();
+            }
+            catch
+            {
+                this.Validate();
+                this.tableAdapterManager.UpdateAll(this.productsDataSet);
+            }
         }
 
         //update data
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.productInfoBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.productsDataSet);
+            chart1.Update();
+            chart1.DataBind();
+            try
+            {
+                this.Validate();
+                this.productInfoBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.productsDataSet);
+            }
+            catch
+            {
+                MessageBox.Show("Please enter a product name.");
+            }
+            
         }
 
         //remove a row from the database
@@ -81,9 +101,9 @@ namespace ProfitCalculator
             {
                 this.productInfoTableAdapter.SearchProduct(this.productsDataSet.ProductInfo, productToolStripTextBox.Text);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
 
         }
@@ -116,12 +136,14 @@ namespace ProfitCalculator
             //calculate total profit
             double totalProfit = profitPer * quantity;
 
+
+            
             //display values in textboxes
             txtCostProduct.Text = pricePer.ToString("C", us);
             txtCostShipping.Text = shipCosts.ToString("C", us);
             txtSellPrice.Text = sellPrice.ToString("C", us);
             txtSellShipping.Text = estimateShip.ToString("C", us);
-            txtFeePercent.Text = fees.ToString() + "%";
+            txtFeePercent.Text = fees.ToString();
             txtCostEach.Text = priceAfterShip.ToString("C", us);
             txtFeesEach.Text = feePer.ToString("C", us);
             txtFeesTotal.Text = totalFees.ToString("C", us);
@@ -129,8 +151,9 @@ namespace ProfitCalculator
             txtProfitTotal.Text = totalProfit.ToString("C", us);
 
             //update chart with new information
-            chart1.DataBind();
             chart1.Update();
+            chart1.DataBind();
+
 
         }
     }
